@@ -1,0 +1,13 @@
+{
+    "ethical_flags": {
+        "fairness": true,
+        "bias": true,
+        "transparency": true,
+        "explainability": true,
+        "consent": true,
+        "privacy": false,
+        "accountability": true,
+        "auditability": false
+    },
+    "ethics_score": "\ud83d\udfe1 Medium Risk"
+}

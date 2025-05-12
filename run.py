@@ -1,5 +1,10 @@
 from analyzer.doc_analyzer import analyze_documentation
+from analyzer.ethics_report import generate_report
 
-results = analyze_documentation("examples/example_README.md")
-for k, v in results.items():
-    print(f"{k.title()}: {'Found' if v else 'Missing'}")
+doc_path = "examples/example_README.md"
+report_path = "reports/example_report.json"
+
+results = analyze_documentation(doc_path)
+
+if results:
+    generate_report(results, report_path)
