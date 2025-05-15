@@ -27,7 +27,7 @@ def analyze_documentation(file_path):
         results = {}
         for keyword in ETHICS_KEYWORDS:
             results[keyword] = bool(re.search(rf"\b{keyword}\b", content))
-
+        
         return results
 
     except FileNotFoundError:
