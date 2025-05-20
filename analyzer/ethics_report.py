@@ -1,5 +1,4 @@
 # analyzer/ethics_report.py
-
 import json
 import os
 
