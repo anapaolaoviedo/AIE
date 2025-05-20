@@ -1,13 +1,39 @@
 {
+    "ethics_score": "\ud83d\udd34 High Risk",
+    "score_summary": {
+        "Fairness": 0,
+        "Transparency": 0,
+        "Privacy": 0,
+        "Accountability": 1
+    },
     "ethical_flags": {
         "fairness": true,
         "bias": true,
-        "transparency": true,
+        "transparency": false,
         "explainability": true,
-        "consent": true,
-        "privacy": false,
-        "accountability": true,
-        "auditability": false
+        "consent": false,
+        "privacy": true,
+        "accountability": false,
+        "auditability": false,
+        "uses_fairlearn": false,
+        "hardcoded_threshold": false,
+        "has_explainability": false,
+        "missing_validation": true,
+        "handles_class_imbalance": false,
+        "uses_privacy_enhancing_tech": false,
+        "uses_bias_mitigation_toolkit": false,
+        "has_model_card": false
     },
-    "ethics_score": "\ud83d\udfe1 Medium Risk"
+    "red_flags": [
+        "No validation techniques found in model",
+        "No fairness-aware data handling (SMOTE, class weights)",
+        "No privacy-enhancing technologies"
+    ],
+    "recommendations": [
+        "Use cross-validation to reduce overfitting.",
+        "Add class balancing (e.g., SMOTE or class_weight).",
+        "Use differential privacy or federated learning.",
+        "Include explainability tools like SHAP or LIME.",
+        "Add a model card to document intended use, risks, and performance."
+    ]
 }

@@ -1,22 +1,12 @@
-# Model README
+# Example AI System
 
-This is a machine learning model developed to predict credit risk based on user financial data.
+This model predicts a binary outcome based on two features. 
+Currently, it does not use fairness or privacy tools, but documentation will be expanded.
 
-## Model Details
-- Trained using XGBoost on a proprietary dataset.
-- Features include income, age, loan history, and credit score.
+## Intended Use
 
-## Ethical Considerations
-
-We considered **fairness** during data collection, ensuring balanced representation of age and gender groups.
-
-Although we have not yet added formal **explainability**, we plan to integrate SHAP values in a future version.
-
-At this point, **bias mitigation** was handled through pre-processing techniques, including feature normalization.
-
-**Transparency** of the model architecture and training procedure is documented in our internal model card.
+For demonstration purposes only.
 
 ## Known Limitations
 
-- Currently no user **consent** form for data usage (in development).
-- Lacks automated auditing or **accountability** mechanisms.
+This version does not apply explainability or bias mitigation.
