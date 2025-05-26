@@ -1,0 +1,11 @@
+gender,income,zip_code,status
+male,50000,90210,approved
+female,NaN,10001,approved
+female,70000,10001,approved
+male,NaN,90210,approved
+female,65000,30303,approved
+male,55000,90210,approved
+female,72000,30303,approved
+male,52000,90210,approved
+female,58000,30303,approved
+female,NaN,10001,denied
