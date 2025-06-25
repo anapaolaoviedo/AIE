@@ -1,6 +1,10 @@
 # --- Dataset Analysis Function ---
-# this file evaluates the data that trains the model 
-#becuase biased or incomplete datasets are one of the most common sources of unethical AI
+'''
+This code's purpose is to check for suspicious datasets that could:
+-have bias
+-are incomplete
+-discriminating
+'''
 import pandas as pd
 from collections import Counter
 import os

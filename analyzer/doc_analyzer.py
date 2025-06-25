@@ -1,5 +1,9 @@
 # analyzer/doc_analyzer.py
 
+'''
+This code's purpose is to read a document and search for ethical words.
+'''
+
 import re
 
 # Define keywords we expect in ethical ML documentation

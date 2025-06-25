@@ -1,3 +1,6 @@
+'''
+This code's pupose is to read ML code 
+'''
 def analyze_model_code(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         code = f.read()
@@ -17,4 +20,4 @@ def analyze_model_code(filepath):
         "has_model_card": "model_card" in code
     }
 
-    return flags
+    return flags 

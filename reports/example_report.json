@@ -1,10 +1,10 @@
 {
-    "ethics_score": "\ud83d\udd34 High Risk",
+    "ethics_score": "\ud83d\udfe1 Medium Risk",
     "score_summary": {
-        "Fairness": 0,
+        "Fairness": 1,
         "Transparency": 0,
         "Privacy": 0,
-        "Accountability": 1
+        "Accountability": 2
     },
     "ethical_flags": {
         "fairness": true,
@@ -18,22 +18,37 @@
         "uses_fairlearn": false,
         "hardcoded_threshold": false,
         "has_explainability": false,
-        "missing_validation": true,
-        "handles_class_imbalance": false,
+        "missing_validation": false,
+        "handles_class_imbalance": true,
         "uses_privacy_enhancing_tech": false,
         "uses_bias_mitigation_toolkit": false,
-        "has_model_card": false
+        "has_model_card": false,
+        "missing_data_columns": [
+            "income"
+        ],
+        "target_column": "status",
+        "class_imbalance_detected": true,
+        "most_common_label_ratio": 0.9,
+        "label_distribution": {
+            "approved": 9,
+            "denied": 1
+        },
+        "proxy_fields": [
+            "zip_code"
+        ]
     },
     "red_flags": [
-        "No validation techniques found in model",
-        "No fairness-aware data handling (SMOTE, class weights)",
-        "No privacy-enhancing technologies"
+        "Detected significant class imbalance in dataset",
+        "Missing data found in: ['income']",
+        "No privacy-enhancing technologies",
+        "Sensitive proxy fields found: ['zip_code']"
     ],
     "recommendations": [
-        "Use cross-validation to reduce overfitting.",
-        "Add class balancing (e.g., SMOTE or class_weight).",
+        "Balance dataset using techniques like SMOTE or reweighting.",
+        "Clean or impute missing values in sensitive columns.",
         "Use differential privacy or federated learning.",
         "Include explainability tools like SHAP or LIME.",
-        "Add a model card to document intended use, risks, and performance."
+        "Add a model card to document intended use, risks, and performance.",
+        "Review dataset columns like ZIP, ethnicity for proxy bias."
     ]
 }
