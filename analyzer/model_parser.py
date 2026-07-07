@@ -1,11 +1,22 @@
 '''
 This code's pupose is to read ML code 
 '''
+def detect_framework(code):
+    if "sklearn" in code or "scikit-learn" in code:
+        return "sklearn"
+    if "torch" in code:
+        return "pytorch"
+    if "tensorflow" in code or "keras" in code:
+        return "tensorflow"
+    return "unknown"
+
+
 def analyze_model_code(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         code = f.read()
 
     flags = {
+        "framework": detect_framework(code),
         "uses_fairlearn": "fairlearn" in code,
         "hardcoded_threshold": "if " in code and ">" in code,
         "has_explainability": "shap" in code or "lime" in code,

@@ -1,0 +1,4 @@
+# pandas 3.x changed string columns from 'object' to 'str' dtype, which breaks
+# target-column detection in analyzer/data_checker.py — stay on 2.x
+pandas>=2.0,<3
+rich>=13.0
